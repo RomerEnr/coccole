@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coccole per te 💌</title>
+<meta name="description" content="Paula, c'è una sorpresa che ti aspetta. Aprimi 🎁">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://romerenr.github.io/coccole/">
+<meta property="og:title" content="Coccole per te 💌">
+<meta property="og:description" content="Paula, c'è una sorpresa che ti aspetta. Aprimi 🎁">
+<meta property="og:image" content="https://romerenr.github.io/coccole/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Una scatola regalo tra gelati e ciliegie">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF4DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=DM+Serif+Display&amp;family=Nunito:wght@400;600;800;900&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#FFF4DE;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+button{font-family:inherit;color:inherit;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a{color:#E2574C}a:hover{color:#6B4135}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.38;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes screenIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes wobble{0%,78%,100%{transform:rotate(0)}82%{transform:rotate(-7deg) scale(1.03)}86%{transform:rotate(6deg)}90%{transform:rotate(-4deg)}94%{transform:rotate(2deg)}}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.06)}24%{transform:scale(.98)}36%{transform:scale(1.04)}50%{transform:scale(1)}}
+@keyframes popIn{from{opacity:0;transform:scale(.7) translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes drop{0%{transform:translateY(-70px) scale(.6);opacity:0}55%{transform:translateY(6px);opacity:1}75%{transform:translateY(-8px)}100%{transform:none}}
+@keyframes stamp{0%{opacity:.01;transform:rotate(-8deg) scale(2.2)}70%{opacity:1;transform:rotate(-8deg) scale(.92)}100%{opacity:1;transform:rotate(-8deg) scale(1)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(60px) rotate(-1deg)}to{opacity:1;transform:rotate(-1deg)}}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
+/* intro avioneta + reveal */
+@keyframes writeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes titleDrop{0%{opacity:0;transform:translateY(-44px) scale(1.06)}60%{opacity:1;transform:translateY(6px)}80%{transform:translateY(-3px)}100%{opacity:1;transform:none}}
+@keyframes lineDraw{from{clip-path:inset(0 50% 0 50%)}to{clip-path:inset(0 0 0 0)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes giftLand{0%{opacity:0;transform:translateY(-5dvh) scale(.6) rotate(-3deg)}35%{opacity:1}68%{transform:translateY(0) scale(1) rotate(1deg)}80%{transform:translateY(0) scale(1.08,.9)}90%{transform:translateY(-6px) scale(.97,1.03)}100%{opacity:1;transform:none}}
+@keyframes chuteAway{0%{opacity:0;transform:translateX(-50%)}25%,52%{opacity:1;transform:translateX(-50%)}78%{opacity:0}100%{opacity:0;transform:translateX(30%) translateY(-40dvh) rotate(14deg)}}
+.chute{display:none}
+[data-intro="video"] .rv{opacity:0;pointer-events:none}
+[data-intro="reveal"] .rv{pointer-events:none}
+[data-intro="reveal"] .rv-gift{animation:giftLand 1.3s cubic-bezier(.3,.7,.4,1) both}
+[data-intro="reveal"] .chute{display:block;animation:chuteAway 2s ease-in both}
+[data-intro="reveal"] .rv-ciao{animation:writeIn .6s .55s ease-out both}
+[data-intro="reveal"] .rv-paula{animation:titleDrop .7s .75s cubic-bezier(.3,.7,.4,1) both}
+[data-intro="reveal"] .rv-line{animation:lineDraw .5s 1.15s ease-out both}
+[data-intro="reveal"] .rv-mancano{animation:rise .45s 1.35s ease-out both}
+[data-intro="reveal"] .rv-digits>*{animation:rise .45s ease-out both}
+[data-intro="reveal"] .rv-digits>:nth-child(1){animation-delay:1.45s}
+[data-intro="reveal"] .rv-digits>:nth-child(2),[data-intro="reveal"] .rv-digits>:nth-child(3){animation-delay:1.53s}
+[data-intro="reveal"] .rv-digits>:nth-child(4),[data-intro="reveal"] .rv-digits>:nth-child(5){animation-delay:1.61s}
+[data-intro="reveal"] .rv-digits>:nth-child(6),[data-intro="reveal"] .rv-digits>:nth-child(7){animation-delay:1.69s}
+[data-intro="reveal"] .rv-aprimi{animation:popIn .45s 1.9s cubic-bezier(.3,1.4,.5,1) both}
+[data-intro="reveal"] .rv-top{animation:fadeIn .4s 2.1s both}
+.fin-ui{opacity:0;pointer-events:none}
+[data-fin="on"] .fin-ui{pointer-events:auto}
+[data-fin="on"] .fin-a{animation:titleDrop .7s cubic-bezier(.3,.7,.4,1) both}
+[data-fin="on"] .fin-b{animation:popIn .45s .35s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes veilIn{from{opacity:0}to{opacity:1}}
+@keyframes paperOpen{0%{clip-path:inset(28% 18% 28% 18% round 4px)}100%{clip-path:inset(0 0 0 0 round 6px)}}
+@keyframes foldLine{0%,40%{opacity:.5}100%{opacity:0}}
+@keyframes inkIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.jar-paper{animation:paperOpen .5s .42s cubic-bezier(.3,.8,.3,1) both}
+.jar-fold{animation:foldLine .9s .42s ease-out both}
+.jar-ink{animation:inkIn .4s .8s ease-out both}
+.jar-btns{animation:inkIn .35s 1s ease-out both}
+</style>
+</helmet>
+<div data-intro="{{ introPhase }}" style="position:relative; height:100dvh; min-height:100dvh; overflow:hidden; background:#FFF4DE; color:#6B4135; font-family:'Nunito', system-ui, sans-serif; display:flex; justify-content:center;">
+  <div style="position:relative; z-index:1; width:100%; max-width:440px; height:100%; display:flex; flex-direction:column; padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);">
+  <sc-if value="{{ bgA }}" hint-placeholder-val="{{ false }}"><div style="position:absolute; inset:0; z-index:-1; pointer-events:none; background:#FFF4DE url('assets/fondo-a.png') center bottom / cover no-repeat;"></div></sc-if>
+  <sc-if value="{{ bgB }}" hint-placeholder-val="{{ true }}"><div style="position:absolute; inset:0; z-index:-1; pointer-events:none; background:#FFF4DE url('assets/fondo-b.png') center bottom / cover no-repeat;"></div></sc-if>
+  <sc-if value="{{ bgVeil }}" hint-placeholder-val="{{ false }}"><div style="position:absolute; inset:0; z-index:-1; pointer-events:none; background:rgba(255,244,222,.55); animation:fadeIn .3s both;"></div></sc-if>  <sc-if value="{{ videoOn }}" hint-placeholder-val="{{ false }}">
+    <video ref="{{ introRef }}" src="assets/intro.mp4" poster="assets/fondo-b.png" preload="auto" aria-hidden="true" style="position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:center bottom; pointer-events:none; transition:opacity .8s ease; opacity:{{ videoOpacity }};"></video>
+    <button onClick="{{ skipIntro }}" style="position:absolute; z-index:6; top:calc(env(safe-area-inset-top) + 12px); right:14px; min-height:44px; padding:0 16px; border-radius:999px; border:2px solid #6B4135; background:rgba(255,251,240,.85); font-weight:800; font-size:14px; cursor:pointer; box-shadow:0 3px 0 #6B4135; transition:opacity .4s; opacity:{{ videoOpacity }};" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6B4135;">Salta ›</button>
+  </sc-if>
+
+    <div class="rv rv-top" style="height:56px; flex:none; display:flex; align-items:center; justify-content:space-between; padding:0 14px; position:relative; z-index:5;">
+      <div style="display:flex; align-items:center;">
+        <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ backAction }}" style="min-height:44px; padding:0 16px; border-radius:999px; border:2px solid #6B4135; background:#FFFBF0; font-weight:800; font-size:15px; cursor:pointer; box-shadow:0 3px 0 #6B4135;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6B4135;">{{ backLabel }}</button>
+        </sc-if>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <sc-if value="{{ musicHint }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Caveat', cursive; font-size:21px; font-weight:700; line-height:1; transform:rotate(-4deg);">un po' di musica? →</span></sc-if>
+        <button onClick="{{ toggleSound }}" aria-label="Musica e suoni" style="width:44px; height:44px; border-radius:50%; border:2px solid #6B4135; background:#FFFBF0; font-size:19px; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 0 #6B4135;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6B4135;">{{ soundIcon }}</button>
+      </div>
+    </div>
+
+    <sc-if value="{{ isCover }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:1; min-height:0; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:clamp(16px, 4dvh, 34px); padding:0 22px 22px; text-align:center; animation:screenIn .5s ease both;">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="rv rv-ciao" style="font-family:'Caveat', cursive; font-weight:700; font-size:clamp(30px, 9vw, 40px); color:#E2574C; line-height:1; transform:rotate(-5deg) translateX(-34px); margin-bottom:-8px;">Ciao</div>
+          <h1 class="rv rv-paula" style="font-family:'DM Serif Display', Georgia, serif; font-weight:400; font-size:clamp(84px, 27vw, 116px); line-height:.9; margin:0; letter-spacing:-.02em; color:#6B4135; text-shadow:4px 4px 0 #F4A3B5;">Paula</h1>
+          <div class="rv rv-line" style="display:flex; align-items:center; gap:10px; margin-top:12px; font-size:11px; font-weight:900; letter-spacing:.26em; text-transform:uppercase;">
+            <span style="width:26px; height:2px; background:#6B4135;"></span>
+            <span>Coccole per te</span>
+            <span style="width:26px; height:2px; background:#6B4135;"></span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div class="rv rv-mancano" style="font-family:'Caveat', cursive; font-size:24px; font-weight:700; line-height:1;">mancano…</div>
+          <div class="rv rv-digits" style="display:flex; align-items:flex-end; justify-content:center; gap:4px;">
+            <div style="display:flex; flex-direction:column; align-items:center; min-width:52px;"><span style="font-family:'DM Serif Display', serif; font-size:36px; line-height:1;">{{ cd.d }}</span><span style="font-size:10.5px; font-weight:900; text-transform:uppercase; letter-spacing:.14em; margin-top:4px;">giorni</span></div><span style="font-family:'DM Serif Display', serif; font-size:26px; color:#E2574C; line-height:1; padding-bottom:16px;">·</span><div style="display:flex; flex-direction:column; align-items:center; min-width:52px;"><span style="font-family:'DM Serif Display', serif; font-size:36px; line-height:1;">{{ cd.h }}</span><span style="font-size:10.5px; font-weight:900; text-transform:uppercase; letter-spacing:.14em; margin-top:4px;">ore</span></div><span style="font-family:'DM Serif Display', serif; font-size:26px; color:#E2574C; line-height:1; padding-bottom:16px;">·</span><div style="display:flex; flex-direction:column; align-items:center; min-width:52px;"><span style="font-family:'DM Serif Display', serif; font-size:36px; line-height:1;">{{ cd.m }}</span><span style="font-size:10.5px; font-weight:900; text-transform:uppercase; letter-spacing:.14em; margin-top:4px;">min</span></div><span style="font-family:'DM Serif Display', serif; font-size:26px; color:#E2574C; line-height:1; padding-bottom:16px;">·</span><div style="display:flex; flex-direction:column; align-items:center; min-width:52px;"><span style="font-family:'DM Serif Display', serif; font-size:36px; line-height:1;">{{ cd.s }}</span><span style="font-size:10.5px; font-weight:900; text-transform:uppercase; letter-spacing:.14em; margin-top:4px;">sec</span></div>
+          </div>
+        </div>
+        <button class="rv rv-gift" onClick="{{ openGift }}" aria-label="Aprimi" style="position:relative; border:none; background:none; padding:0; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <div ref="{{ giftRef }}" style="position:relative; width:min(46vw, 22dvh, 190px); aspect-ratio:1; animation:wobble 4s ease-in-out infinite; transform-origin:50% 88%;">
+            <svg class="chute" aria-hidden="true" viewBox="0 0 100 100" style="position:absolute; left:50%; bottom:80%; width:120%; height:auto; overflow:visible;">
+              <defs><pattern id="chuteStripes" width="24" height="60" patternUnits="userSpaceOnUse"><rect width="12" height="60" fill="#F4A3B5"/><rect x="12" width="12" height="60" fill="#FFF4DE"/></pattern></defs>
+              <g stroke="#6B4135" stroke-width="1" fill="none" opacity=".8"><path d="M6 36 L32 100"/><path d="M28 38 L42 100"/><path d="M50 38 L50 100"/><path d="M72 38 L58 100"/><path d="M94 36 L68 100"/></g>
+              <path d="M4 36 Q4 0 50 0 Q96 0 96 36 Q85 30 73 37 Q61 30 50 37 Q39 30 27 37 Q15 30 4 36 Z" fill="url(#chuteStripes)" stroke="#6B4135" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+            <img ref="{{ giftFullRef }}" src="assets/gift-full.png" alt="" draggable="false" style="position:absolute; inset:0; width:100%; height:100%; display:block;">
+            <img ref="{{ giftBaseRef }}" src="assets/gift-base.png" alt="" draggable="false" style="position:absolute; inset:0; width:100%; height:100%; display:block; opacity:0;">
+            <img ref="{{ lidRef }}" src="assets/gift-lid.png" alt="" draggable="false" style="position:absolute; inset:0; width:100%; height:100%; display:block; opacity:0; transform-origin:50% 45%;">
+          </div>
+          <span class="rv rv-aprimi" style="background:#E2574C; color:#FFFBF0; font-weight:900; font-size:15px; letter-spacing:.18em; text-transform:uppercase; padding:10px 24px; border-radius:999px; border:2px solid #6B4135; box-shadow:0 3px 0 #6B4135;">Aprimi</span>
+        </button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isBox }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; display:flex; flex-direction:column; gap:14px; padding:4px 18px 18px; animation:screenIn .4s ease both;">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:10px;">
+          <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:36px; line-height:1; margin:0;">La scatola</h2>
+          <div style="font-weight:800; font-size:14px; background:#F7E28B; border:2px solid #6B4135; border-radius:999px; padding:6px 12px; white-space:nowrap;">Sorprese aperte: {{ doneCount }}/4</div>
+        </div>
+        <div style="height:16px; flex:none; border:2px solid #6B4135; border-radius:8px; background:repeating-linear-gradient(90deg, #F4A3B5 0 22px, #FFFBF0 22px 44px);"></div>
+        <div style="flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:12px;">
+          <button onClick="{{ goGelato }}" style="position:relative; border:2.5px solid #6B4135; border-radius:22px; background:#F4A3B5; box-shadow:0 4px 0 #6B4135; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px; cursor:pointer; min-height:0;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">
+            <img src="assets/icon-gelato.png" alt="Gelato" draggable="false" style="height:min(17dvh, 150px); width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 3px 0 rgba(107,65,53,.18));">
+            <span style="font-family:'DM Serif Display', serif; font-size:19px; line-height:1.05; text-align:center;">Il Gelato del Giorno</span>
+            <sc-if value="{{ done.gelato }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:8px; right:8px; width:30px; height:30px; border-radius:50%; background:#6B4135; color:#FFF4DE; font-weight:900; display:flex; align-items:center; justify-content:center; animation:popIn .4s both;">✓</span></sc-if>
+          </button>
+          <button onClick="{{ goMood }}" style="position:relative; border:2.5px solid #6B4135; border-radius:22px; background:#F7E28B; box-shadow:0 4px 0 #6B4135; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px; cursor:pointer; min-height:0;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">
+            <img src="assets/icon-barattolo.png" alt="Barattolo" draggable="false" style="height:min(17dvh, 150px); width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 3px 0 rgba(107,65,53,.18));">
+            <span style="font-family:'DM Serif Display', serif; font-size:19px; line-height:1.05; text-align:center;">Il Barattolo</span>
+            <sc-if value="{{ done.mood }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:8px; right:8px; width:30px; height:30px; border-radius:50%; background:#6B4135; color:#FFF4DE; font-weight:900; display:flex; align-items:center; justify-content:center; animation:popIn .4s both;">✓</span></sc-if>
+          </button>
+          <button onClick="{{ goMachine }}" style="position:relative; border:2.5px solid #6B4135; border-radius:22px; background:#B8D8A0; box-shadow:0 4px 0 #6B4135; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px; cursor:pointer; min-height:0;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">
+            <img src="assets/icon-macchinetta.png" alt="Macchinetta" draggable="false" style="height:min(17dvh, 150px); width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 3px 0 rgba(107,65,53,.18));">
+            <span style="font-family:'DM Serif Display', serif; font-size:19px; line-height:1.05; text-align:center;">La Macchinetta dei Buoni</span>
+            <sc-if value="{{ done.machine }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:8px; right:8px; width:30px; height:30px; border-radius:50%; background:#6B4135; color:#FFF4DE; font-weight:900; display:flex; align-items:center; justify-content:center; animation:popIn .4s both;">✓</span></sc-if>
+          </button>
+          <button onClick="{{ goLetter }}" style="position:relative; border:2.5px solid #6B4135; border-radius:22px; background:#FFFBF0; box-shadow:0 4px 0 #6B4135; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px; cursor:pointer; min-height:0;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">
+            <img src="assets/icon-lettera.png" alt="Lettera" draggable="false" style="height:min(17dvh, 150px); width:auto; max-width:100%; object-fit:contain; display:block; filter:drop-shadow(0 3px 0 rgba(107,65,53,.18));">
+            <span style="font-family:'DM Serif Display', serif; font-size:19px; line-height:1.05; text-align:center;">La Lettera</span>
+            <sc-if value="{{ done.letter }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:8px; right:8px; width:30px; height:30px; border-radius:50%; background:#6B4135; color:#FFF4DE; font-weight:900; display:flex; align-items:center; justify-content:center; animation:popIn .4s both;">✓</span></sc-if>
+          </button>
+        </div>
+        <sc-if value="{{ finalUnlocked }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ goFinal }}" style="min-height:56px; border:2.5px solid #6B4135; border-radius:999px; background:#6B4135; color:#FFF4DE; font-weight:900; font-size:17px; letter-spacing:.04em; cursor:pointer; box-shadow:0 4px 0 #E2574C; animation:popIn .5s both;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #E2574C;">✨ Sorpresa finale</button>
+        </sc-if>
+        <sc-if value="{{ finalLocked }}" hint-placeholder-val="{{ true }}">
+          <div style="text-align:center; font-family:'Caveat', cursive; font-size:22px; font-weight:700; line-height:1;">Aprile in qualsiasi ordine… alla fine c'è un segreto 🤫</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isGelato }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; display:flex; flex-direction:column; gap:10px; padding:2px 16px 16px; animation:screenIn .4s ease both;">
+        <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:32px; line-height:1; margin:0; text-align:center;">Il Gelato del Giorno</h2>
+        <sc-if value="{{ gNotResult }}" hint-placeholder-val="{{ true }}">
+          <div style="flex:1; min-height:0; display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; justify-content:center; gap:10px;">
+              <span style="font-weight:900; font-size:16px; background:#F4A3B5; border:2px solid #6B4135; border-radius:999px; padding:6px 14px; white-space:nowrap;">🍦 {{ gCaught }}/6</span>
+              <span style="font-weight:900; font-size:16px; background:#F7E28B; border:2px solid #6B4135; border-radius:999px; padding:6px 14px; min-width:84px; white-space:nowrap; text-align:center;">⏱ {{ gTime }}s</span>
+            </div>
+            <div style="flex:1; min-height:0; position:relative; border:2.5px solid #6B4135; border-radius:24px; overflow:hidden; background:#FFFBF0;">
+              <div style="position:absolute; top:0; left:0; right:0; height:20px; border-bottom:2px solid #6B4135; background:repeating-linear-gradient(90deg, #B8D8A0 0 22px, #FFFBF0 22px 44px);"></div>
+              <canvas ref="{{ canvasRef }}" onPointerDown="{{ gPointer }}" onPointerMove="{{ gPointer }}" style="position:absolute; inset:0; width:100%; height:100%; display:block; touch-action:none;"></canvas>
+              <sc-if value="{{ gIsIntro }}" hint-placeholder-val="{{ true }}">
+                <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:24px; text-align:center; background:rgba(255,244,222,.92);">
+                  <div style="font-size:18px; font-weight:800; line-height:1.35; max-width:290px; text-wrap:pretty;">Trascina il cono col dito e prendi <b>6 palline</b> di gelato.</div>
+                  <div style="font-size:16px; line-height:1.4; max-width:270px;">Occhio agli intrusi: 🥦 e 🧅. Hai 40 secondi (ma tranquilla: qui non si perde mai).</div>
+                  <button onClick="{{ startGame }}" style="min-height:54px; padding:0 34px; border:2.5px solid #6B4135; border-radius:999px; background:#E2574C; color:#FFFBF0; font-weight:900; font-size:18px; white-space:nowrap; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Inizia 🍦</button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ gHasMsg }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute; top:42px; left:50%; transform:translateX(-50%); pointer-events:none;">
+                  <div style="background:#6B4135; color:#FFF4DE; font-weight:900; font-size:17px; padding:10px 16px; border-radius:16px; white-space:nowrap; animation:popIn .3s both;">{{ gMsg }}</div>
+                </div>
+              </sc-if>
+            </div>
+            <div style="text-align:center; font-size:14px; font-weight:700; opacity:.8;">Trascina il cono · evita 🥦 e 🧅</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ gIsResult }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:space-evenly; gap:10px; text-align:center;">
+            <svg viewBox="0 0 160 270" style="height:min(32dvh, 270px); width:auto; overflow:visible; animation:popIn .5s both;">
+              <defs><pattern id="strac" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#FBF3E4"></rect><circle cx="3" cy="4" r="1.8" fill="#6B4135"></circle><circle cx="10" cy="10" r="1.5" fill="#6B4135"></circle></pattern></defs>
+              <path d="M48 178 L112 178 L80 262 Z" fill="#E9B872" stroke="#6B4135" stroke-width="3" stroke-linejoin="round"></path>
+              <path d="M58 186 L86 230 M72 182 L96 214 M102 186 L74 230 M88 182 L64 214" stroke="#C98E45" stroke-width="2.5"></path>
+              <sc-for list="{{ resultScoops }}" as="sc" hint-placeholder-count="3">
+                <circle cx="80" cy="{{ sc.cy }}" r="30" fill="{{ sc.fill }}" stroke="#6B4135" stroke-width="3"></circle>
+              </sc-for>
+            </svg>
+            <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
+              <div style="font-size:12px; font-weight:900; letter-spacing:.18em; text-transform:uppercase; color:#E2574C;">Gusto preferito: {{ favName }}</div>
+              <div style="font-family:'DM Serif Display', serif; font-size:25px; line-height:1.15; max-width:320px; text-wrap:pretty;">{{ favText }}</div>
+            </div>
+            <div style="background:#F7E28B; border:2.5px dashed #6B4135; border-radius:14px; padding:12px 16px; font-weight:800; font-size:16px; transform:rotate(-1.5deg);">Questo gelato te lo offro io il 10 🍦</div>
+            <button onClick="{{ startGame }}" style="min-height:52px; padding:0 30px; border:2.5px solid #6B4135; border-radius:999px; background:#FFFBF0; font-weight:900; font-size:17px; white-space:nowrap; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Gioca ancora</button>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMood }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; gap:10px; padding:2px 18px 22px; text-align:center;">
+        <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:34px; line-height:1; margin:0; animation:screenIn .4s ease both;">Il Barattolo</h2>
+        <div style="font-family:'Caveat', cursive; font-size:22px; font-weight:700; line-height:1.1; animation:screenIn .4s .05s ease both;">{{ jarHint }}</div>
+        <button onClick="{{ drawNote }}" aria-label="Pesca un biglietto" style="flex:1; min-height:0; width:100%; border:none; background:none; padding:0; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+          <video ref="{{ jarRef }}" src="assets/barattolo.mp4?v=3" poster="assets/barattolo-poster.jpg" preload="auto" muted playsinline aria-hidden="true" style="height:min(46dvh, 380px); max-width:100%; aspect-ratio:1; display:block; mix-blend-mode:multiply; pointer-events:none; animation:screenIn .4s .08s ease both;"></video>
+        </button>
+        <button onClick="{{ drawNote }}" style="min-height:52px; padding:0 26px; border:2.5px solid #6B4135; border-radius:999px; background:#E2574C; color:#FFFBF0; font-weight:900; font-size:16px; cursor:pointer; box-shadow:0 4px 0 #6B4135; animation:screenIn .4s .12s ease both;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Pesca un biglietto ✨</button>
+      </div>
+      <sc-if value="{{ noteOpen }}" hint-placeholder-val="{{ false }}">
+        <div ref="{{ veilRef }}" onClick="{{ closeNote }}" style="position:absolute; inset:0; z-index:30; background:rgba(107,65,53,.32); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:24px; animation:veilIn .3s both;">
+          <div ref="{{ noteRef }}" onClick="{{ stopTap }}" style="width:100%; max-width:340px; transform:rotate(-1.5deg);">
+            <div class="jar-paper" style="position:relative; background:#FFFBF0; border:2.5px solid #6B4135; border-radius:6px; padding:30px 22px 20px; box-shadow:0 6px 0 #6B4135; text-align:center; background-image:repeating-linear-gradient(transparent 0 33px, rgba(226,87,76,.16) 33px 34px);">
+              <span style="position:absolute; top:-12px; left:50%; width:70px; height:24px; margin-left:-35px; background:rgba(244,163,181,.8); transform:rotate(3deg);"></span>
+              <span class="jar-fold" style="position:absolute; left:8px; right:8px; top:50%; height:2px; background:#6B4135; pointer-events:none;"></span>
+              <div class="jar-ink" style="font-family:'Caveat', cursive; font-size:30px; font-weight:700; line-height:1.15; text-wrap:pretty;">{{ noteText }}</div>
+              <div class="jar-ink" style="margin-top:12px; font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; color:#E2574C;">Biglietto {{ noteNum }}/{{ noteTotal }}</div>
+            </div>
+          </div>
+          <div class="jar-btns" onClick="{{ stopTap }}" style="display:flex; gap:10px;">
+            <button onClick="{{ anotherNote }}" style="min-height:50px; padding:0 22px; border:2.5px solid #6B4135; border-radius:999px; background:#E2574C; color:#FFFBF0; font-weight:900; font-size:16px; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Un altro ✨</button>
+            <button onClick="{{ closeNote }}" style="min-height:50px; padding:0 22px; border:2.5px solid #6B4135; border-radius:999px; background:#FFFBF0; font-weight:900; font-size:16px; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Chiudi</button>
+          </div>
+        </div>
+      </sc-if>
+    </sc-if>
+
+    <sc-if value="{{ isMachine }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; position:relative; display:flex; flex-direction:column; align-items:center; gap:10px; padding:2px 18px 18px; animation:screenIn .4s ease both;">
+        <div style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:28px; line-height:1; margin:0;">La Macchinetta dei Buoni</h2>
+          <button onClick="{{ goWallet }}" style="flex:none; min-height:44px; padding:0 12px; border:2px solid #6B4135; border-radius:14px; background:#F7E28B; font-weight:900; font-size:14px; cursor:pointer; box-shadow:0 3px 0 #6B4135; line-height:1.1;" style-active="transform:translateY(2px); box-shadow:0 1px 0 #6B4135;">👛 Buoni: {{ wonCount }}/7</button>
+        </div>
+        <div style="flex:1; min-height:0; width:100%; display:flex; align-items:center; justify-content:center;">
+          <div ref="{{ machineWrapRef }}" style="height:100%; max-height:360px; display:flex; align-items:center; justify-content:center; transform-origin:50% 100%;">
+            <svg ref="{{ machineSvgRef }}" viewBox="0 0 200 262" style="height:100%; width:auto; max-width:100%; overflow:visible; display:block;">
+              <circle cx="100" cy="8" r="7" fill="#E2574C" stroke="#6B4135" stroke-width="3"></circle>
+              <rect x="80" y="12" width="40" height="12" rx="4" fill="#E2574C" stroke="#6B4135" stroke-width="3"></rect>
+              <circle cx="100" cy="94" r="76" fill="#FFFBF0" stroke="#6B4135" stroke-width="4"></circle>
+              <sc-for list="{{ capsules }}" as="c" hint-placeholder-count="7">
+                <circle cx="{{ c.cx }}" cy="{{ c.cy }}" r="17" fill="{{ c.fill }}" stroke="#6B4135" stroke-width="2"></circle>
+              </sc-for>
+              <path d="M48 52 Q62 34 84 28" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity=".9"></path>
+              <rect x="66" y="166" width="68" height="16" rx="3" fill="#6B4135"></rect>
+              <text x="100" y="178.5" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="11" letter-spacing="2" fill="#F7E28B">BUONI</text>
+              <path d="M46 182 H154 L168 254 H32 Z" fill="#E2574C" stroke="#6B4135" stroke-width="4" stroke-linejoin="round"></path>
+              <rect x="82" y="234" width="36" height="16" rx="4" fill="#6B4135"></rect>
+              <g ref="{{ crankRef }}" onPointerDown="{{ crankDown }}" onPointerMove="{{ crankMove }}" onPointerUp="{{ crankUp }}" onPointerCancel="{{ crankUp }}" style="transform-box:view-box; transform-origin:100px 208px; cursor:grab; touch-action:none;">
+                <circle cx="100" cy="208" r="32" fill="transparent"></circle>
+                <circle cx="100" cy="208" r="17" fill="#FFF4DE" stroke="#6B4135" stroke-width="4"></circle>
+                <rect x="96" y="186" width="8" height="22" rx="3" fill="#6B4135"></rect>
+                <circle cx="100" cy="186" r="7" fill="#F7E28B" stroke="#6B4135" stroke-width="3"></circle>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div style="width:100%; min-height:118px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;">
+          <sc-if value="{{ mIdle }}" hint-placeholder-val="{{ true }}">
+            <button onClick="{{ spinTap }}" style="min-height:56px; width:100%; max-width:320px; border:2.5px solid #6B4135; border-radius:999px; background:#E2574C; color:#FFFBF0; font-weight:900; font-size:18px; white-space:nowrap; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Gira la manovella ↻</button>
+            <div style="font-size:14px; font-weight:700; opacity:.8;">…o girala col dito, come una volta</div>
+          </sc-if>
+          <sc-if value="{{ mCapsule }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ openCapsule }}" aria-label="Apri la capsula" style="width:72px; height:72px; border-radius:50%; border:3px solid #6B4135; background:linear-gradient(180deg, {{ capColor }} 50%, #FFFBF0 50%); cursor:pointer; animation:drop .7s cubic-bezier(.3,1.3,.5,1) both; box-shadow:0 4px 0 #6B4135;"></button>
+            <div style="font-family:'Caveat', cursive; font-size:24px; font-weight:700;">Toccala per aprirla!</div>
+          </sc-if>
+          <sc-if value="{{ mComplete }}" hint-placeholder-val="{{ false }}">
+            <div style="background:#F7E28B; border:2.5px solid #6B4135; border-radius:18px; padding:12px 16px; text-align:center; font-weight:800; font-size:16px; line-height:1.35; animation:popIn .4s both;">Collezione completa! Sei ufficialmente la mia cliente VIP 👑</div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ mTicket }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; inset:0; z-index:20; display:flex; align-items:center; justify-content:center; padding:18px; background:rgba(107,65,53,.4); animation:fadeIn .25s both;">
+            <div style="width:100%; max-width:340px; background:#FFFBF0; border:2.5px solid #6B4135; border-radius:18px; box-shadow:0 6px 0 #6B4135; overflow:hidden; animation:popIn .45s cubic-bezier(.2,1.5,.4,1) both;">
+              <div style="background:#F7E28B; border-bottom:2.5px dashed #6B4135; padding:12px 16px; display:flex; justify-content:space-between; font-weight:900; letter-spacing:.12em; font-size:12px; text-transform:uppercase;"><span>Buono n° {{ ticket.n }}</span><span>Valido per Paula</span></div>
+              <div style="padding:18px 20px 20px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px;">
+                <div style="font-size:54px; line-height:1;">{{ ticket.emoji }}</div>
+                <div style="font-family:'DM Serif Display', serif; font-size:30px; line-height:1.05;">{{ ticket.title }}</div>
+                <div style="font-size:11px; text-transform:uppercase; letter-spacing:.14em; font-weight:900; color:#E2574C;">Termini e condizioni</div>
+                <div style="font-size:16px; font-style:italic; line-height:1.4; text-wrap:pretty;">{{ ticket.fine }}</div>
+                <div style="margin-top:6px; border:3px solid #E2574C; color:#E2574C; border-radius:8px; padding:6px 12px; font-weight:900; text-transform:uppercase; letter-spacing:.1em; font-size:13px; animation:stamp .5s .35s both;">Da riscattare il 10</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:0 16px 16px;">
+                <button onClick="{{ goWallet }}" style="min-height:48px; border:2px solid #6B4135; border-radius:999px; background:#FFFBF0; font-weight:900; font-size:15px; white-space:nowrap; cursor:pointer;">👛 Portafoglio</button>
+                <button onClick="{{ closeTicket }}" style="min-height:48px; border:2px solid #6B4135; border-radius:999px; background:#6B4135; color:#FFF4DE; font-weight:900; font-size:15px; white-space:nowrap; cursor:pointer;">{{ ticketNext }}</button>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isWallet }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; display:flex; flex-direction:column; gap:10px; padding:2px 16px 16px; animation:screenIn .4s ease both;">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:10px;">
+          <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:30px; line-height:1; margin:0;">Il mio portafoglio</h2>
+          <div style="font-weight:900; font-size:14px; background:#F7E28B; border:2px solid #6B4135; border-radius:999px; padding:6px 12px; white-space:nowrap;">Buoni: {{ wonCount }}/7</div>
+        </div>
+        <sc-if value="{{ allWon }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#6B4135; color:#FFF4DE; border-radius:14px; padding:10px 14px; text-align:center; font-weight:800; font-size:15px;">Collezione completa! Sei ufficialmente la mia cliente VIP 👑</div>
+        </sc-if>
+        <div style="flex:1; min-height:0; overflow-y:auto; display:flex; flex-direction:column; gap:8px; padding:2px 2px 4px;">
+          <sc-for list="{{ wallet }}" as="w" hint-placeholder-count="7">
+            <div style="flex:none;">
+              <sc-if value="{{ w.won }}" hint-placeholder-val="{{ false }}">
+                <div style="position:relative; display:grid; grid-template-columns:40px minmax(0,1fr); align-items:center; gap:10px; background:#FFFBF0; border:2px solid #6B4135; border-radius:12px; padding:8px 12px; box-shadow:0 3px 0 #6B4135; overflow:hidden;">
+                  <div style="font-size:28px; text-align:center;">{{ w.emoji }}</div>
+                  <div style="min-width:0;">
+                    <div style="font-family:'DM Serif Display', serif; font-size:18px; line-height:1.1; padding-right:86px; min-height:40px; display:flex; align-items:center;">{{ w.title }}</div>
+                    <div style="font-size:12.5px; line-height:1.3; font-style:italic; opacity:.85;">{{ w.fine }}</div>
+                  </div>
+                  <div style="position:absolute; right:8px; top:7px; transform:rotate(-8deg); border:2px solid #E2574C; color:#E2574C; border-radius:6px; padding:3px 5px; font-weight:900; font-size:9.5px; line-height:1.1; text-transform:uppercase; text-align:center; letter-spacing:.04em;">Da riscattare<br>il 10</div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ w.locked }}" hint-placeholder-val="{{ true }}">
+                <div style="display:grid; grid-template-columns:40px 1fr; align-items:center; gap:10px; border:2px dashed #6B4135; border-radius:12px; padding:8px 12px; min-height:58px; opacity:.55;">
+                  <div style="font-family:'DM Serif Display', serif; font-size:28px; text-align:center;">?</div>
+                  <div style="font-weight:800; font-size:14px;">Buono misterioso · gira la manovella</div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <button onClick="{{ goMachine }}" style="min-height:50px; border:2.5px solid #6B4135; border-radius:999px; background:#E2574C; color:#FFFBF0; font-weight:900; font-size:16px; cursor:pointer; box-shadow:0 4px 0 #6B4135;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #6B4135;">Torna alla macchinetta</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isLetter }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:2px 18px 18px; animation:screenIn .4s ease both;">
+        <sc-if value="{{ letterClosed }}" hint-placeholder-val="{{ true }}">
+          <h2 style="font-family:'DM Serif Display', serif; font-weight:400; font-size:34px; line-height:1; margin:0;">La Lettera</h2>
+          <button onClick="{{ openLetter }}" aria-label="Apri la lettera" style="border:none; background:none; padding:0; cursor:pointer; animation:floaty 3s ease-in-out infinite;">
+            <svg viewBox="0 0 240 172" style="width:min(80vw, 300px); height:auto; overflow:visible; display:block;">
+              <rect x="6" y="30" width="228" height="136" rx="10" fill="#F6E3BC" stroke="#6B4135" stroke-width="4"></rect>
+              <path d="M6 164 L120 92 L234 164" fill="none" stroke="#6B4135" stroke-width="3" stroke-linejoin="round"></path>
+              <g ref="{{ flapRef }}" style="transform-box:fill-box; transform-origin:50% 0;">
+                <path d="M8 32 L120 112 L232 32 Z" fill="#F2D7A8" stroke="#6B4135" stroke-width="4" stroke-linejoin="round"></path>
+                <circle cx="120" cy="108" r="22" fill="#E2574C" stroke="#6B4135" stroke-width="3"></circle>
+                <circle cx="120" cy="108" r="15" fill="none" stroke="#B9403A" stroke-width="2.5"></circle>
+                <text x="120" y="117" text-anchor="middle" font-family="DM Serif Display, serif" font-size="24" fill="#FFF4DE">P</text>
+              </g>
+            </svg>
+          </button>
+          <div style="font-family:'Caveat', cursive; font-size:26px; font-weight:700;">Tocca il sigillo 💌</div>
+        </sc-if>
+        <sc-if value="{{ letterOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%; max-height:100%; overflow-y:auto; background:#FFFBF0; background-image:repeating-linear-gradient(180deg, transparent 0 35px, rgba(107,65,53,.12) 35px 36px); background-position:0 18px; background-attachment:local; border:2px solid #6B4135; border-radius:6px; box-shadow:0 6px 0 rgba(107,65,53,.25); padding:18px 20px 22px; font-family:'Caveat', cursive; font-size:clamp(23px, 6.4vw, 27px); line-height:36px; animation:slideUp .7s cubic-bezier(.2,1.2,.4,1) both;">
+            <div style="font-weight:700;">Paula,</div>
+            <div>so che sei nei tuoi giorni del ciclo: non posso portarti a mangiare, né farti le coccole, né portarti dei fiori… ma spero che con questo pensierino ti si illumini il pomeriggio e che tu mi senta un po' più vicino&nbsp;a&nbsp;te.</div>
+            <div style="margin-top:36px;">Un bacio grande,</div>
+            <div style="font-weight:700; color:#E2574C;">{{ firma }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isFinal }}" hint-placeholder-val="{{ false }}">
+      <div data-fin="{{ finState }}" style="position:absolute; inset:0; z-index:2; overflow:hidden;">
+        <video ref="{{ finRef }}" src="assets/final.mp4?v=4" poster="assets/final-poster.jpg" preload="auto" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center bottom; pointer-events:none;"></video>
+        <div style="position:absolute; left:0; right:0; bottom:calc(env(safe-area-inset-bottom) + 26px); display:flex; flex-direction:column; align-items:center; gap:14px; padding:0 22px; text-align:center;">
+          <div class="fin-ui fin-a" style="background:#F4A3B5; border:2.5px solid #6B4135; border-radius:18px; padding:14px 22px; font-family:'DM Serif Display', serif; font-size:26px; line-height:1.1; box-shadow:0 4px 0 #6B4135;">{{ seeYouText }}</div>
+          <button class="fin-ui fin-b" onClick="{{ goBox }}" style="min-height:52px; padding:0 28px; border:2.5px solid #6B4135; border-radius:999px; background:#6B4135; color:#FFF4DE; font-weight:900; font-size:16px; cursor:pointer; box-shadow:0 4px 0 #E2574C;" style-active="transform:translateY(3px); box-shadow:0 1px 0 #E2574C;">Torna alla scatola</button>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+  <div ref="{{ confRef }}" style="position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:40;"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;firma&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Romer&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;simulaData&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;reale&quot;,&quot;10 novembre&quot;],&quot;default&quot;:&quot;reale&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;sbloccaFinale&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;sfondo&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;B&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  D = {
+    TARGET: Date.parse('2026-11-10T19:00:00Z'), // 10 novembre, 20:00 ora italiana
+    START: Date.parse('2026-10-15T22:00:00Z'),
+    KEY: 'coccole-paula-v1',
+    COL: { pistacchio: '#B8D8A0', fragola: '#F4A3B5', cioccolato: '#8A5A44', stracciatella: '#FBF3E4', limone: '#F7E28B' },
+    NAMES: { pistacchio: 'Pistacchio', fragola: 'Fragola', cioccolato: 'Cioccolato', stracciatella: 'Stracciatella', limone: 'Limone' },
+    FAV: {
+      pistacchio: 'Gusto raffinato. Come te, ovviamente.',
+      fragola: 'Dolce e un po\' piccante… ah no, quella sei tu.',
+      cioccolato: 'Cioccolato: medicina ufficiale di oggi. Prescritta da me.',
+      stracciatella: 'Una classica impossibile da non amare. Ti ricorda qualcuna?',
+      limone: 'Fresca e frizzante, come le nostre videochiamate.'
+    },
+    YUCK: ['Ma che schifo! 🤢', 'Bleah! Gelato al broccolo no 🥦', 'Cipolla?! Ma che schifo! 🧅', 'Ma che schifo! 🤢'],
+    VOUCHERS: [
+      { id: 'sushi', emoji: '🍣', title: 'Buono Sushi', fine: 'Sushi illimitato, offro io. L\'ultimo uramaki però è mio.' },
+      { id: 'massaggio', emoji: '💆', title: 'Buono Massaggio', fine: 'Ti sdrai, chiudi gli occhi e al resto ci penso io. Finisco quando lo decido io.' },
+      { id: 'vino', emoji: '🍷', title: 'Buono Vino', fine: 'Una bottiglia a tua scelta. Il cavatappi lo porto io.' },
+      { id: 'film', emoji: '🎬', title: 'Buono Film', fine: 'Scegli tu il film… y si es de miedo, tranquila: te abrazo yo.' },
+      { id: 'stupid', emoji: '🤪', title: 'Buono Stupidaggine', fine: 'Una stupidaggine a tua scelta. Io ci sto, senza fare domande.' },
+      { id: 'gelato', emoji: '🍦', title: 'Buono Gelato Doppio', fine: 'Due gusti. Anzi tre. Non giudico.' },
+      { id: 'segreto', emoji: '🤫', title: 'Buono Top Secret', fine: 'Ti bacio dappertutto, piano piano, e scendo sempre più giù… Il resto lo scopri il 10 😏' }
+    ],
+    NOTE_AT: 1.3,
+    LEO_CUES: [[0.4, 'patter'], [2.6, 'meow'], [4.4, 'hop'], [4.9, 'hop'], [5.4, 'hop']],
+    NOTES: [
+      'Sei una ragazza speciale. Te lo dico sempre, e non smetterò mai di dirtelo.',
+      'Mi piaci più della pizza napoletana 🍕',
+      'Lo dico sul serio: la mamma dei miei figli sarai tu. Ho già deciso.',
+      'Sei dolcissima. E quella dolcezza la proteggo io.',
+      'Se mi parlano di perfezione, penso solo al tuo nome e cognome.',
+      'Andrea Alvarez 👶💙',
+      'Quiero ser tu Leoo 🐱',
+      'Litigavi per il diritto di scegliere in che posizione guardare le stelle 😏',
+      'Il 10 ti faccio l\'amore piano, senza fretta, come se il tempo si fermasse.',
+      'Insieme io e te ❤️'
+    ],
+    CAPS: [[62, 132], [98, 142], [134, 132], [76, 104], [114, 110], [148, 100], [56, 94]],
+    CAPCOL: ['#F4A3B5', '#F7E28B', '#B8D8A0', '#E2574C', '#FBF3E4', '#F4A3B5', '#B8D8A0']
+  };
+  canvasRef = React.createRef(); giftRef = React.createRef(); giftFullRef = React.createRef(); giftBaseRef = React.createRef(); lidRef = React.createRef(); bowRef = React.createRef();
+  confRef = React.createRef(); crankRef = React.createRef(); machineSvgRef = React.createRef();
+  machineWrapRef = React.createRef(); flapRef = React.createRef(); introRef = React.createRef(); jarRef = React.createRef(); noteRef = React.createRef(); veilRef = React.createRef(); finRef = React.createRef();
+
+  state = Object.assign({
+    screen: 'cover', now: Date.now(),
+    done: { gelato: false, mood: false, machine: false, letter: false },
+    won: [], finalSeen: false, sound: false,
+    gPhase: 'intro', gCaught: 0, gTime: 40, gMsg: '', gResult: null,
+    notes: [], note: null, noteOpen: false, finUi: false, mPhase: 'idle', ticket: null, capColor: '#F4A3B5', letterOpen: false
+  }, this.load(), this.introStart());
+
+  load() {
+    try {
+      const v = JSON.parse(localStorage.getItem('coccole-paula-v1') || 'null');
+      if (v && typeof v === 'object') return {
+        done: Object.assign({ gelato: false, mood: false, machine: false, letter: false }, v.done || {}),
+        won: Array.isArray(v.won) ? v.won : [], finalSeen: !!v.finalSeen, notes: Array.isArray(v.notes) ? v.notes : []
+      };
+    } catch (e) {}
+    return {};
+  }
+  persist() {
+    try { const s = this.state; localStorage.setItem(this.D.KEY, JSON.stringify({ done: s.done, won: s.won, finalSeen: s.finalSeen, notes: s.notes })); } catch (e) {}
+  }
+  introStart() {
+    let seen = false;
+    try { seen = localStorage.getItem('coccole-paula-intro') === '1'; } catch (e) {}
+    return seen ? { intro: 'reveal', videoOn: false, videoFade: false } : { intro: 'video', videoOn: true, videoFade: false };
+  }
+  setupIntro() {
+    const v = this.introRef.current;
+    if (this.state.intro !== 'video' || this.reduced || !v) { this.endIntro(); return; }
+    v.muted = true; v.defaultMuted = true; v.playsInline = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
+    this._introFail = setTimeout(() => this.endIntro(), 3000);
+    v.addEventListener('playing', () => clearTimeout(this._introFail), { once: true });
+    v.addEventListener('error', () => this.endIntro());
+    v.addEventListener('ended', () => this.endIntro());
+    v.addEventListener('timeupdate', () => { if (v.duration && v.currentTime >= v.duration - 1.1) this.endIntro(); });
+    try { const p = v.play(); if (p && p.catch) p.catch(() => this.endIntro()); } catch (e) { this.endIntro(); }
+  }
+  endIntro() {
+    if (this._introEnded) return;
+    this._introEnded = true;
+    clearTimeout(this._introFail);
+    try { localStorage.setItem('coccole-paula-intro', '1'); } catch (e) {}
+    if (this.state.videoOn) {
+      this.setState({ videoFade: true });
+      this._videoT = setTimeout(() => { try { if (this.introRef.current) this.introRef.current.pause(); } catch (e) {} this.setState({ videoOn: false }); }, 850);
+    }
+    this.setState({ intro: 'reveal' });
+    this._revealT = setTimeout(() => this.setState({ intro: 'done' }), 2700);
+  }
+  skipIntro = () => { this.vib(10); this.endIntro(); };
+  componentDidMount() {
+    try { this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { this.reduced = false; }
+    this.timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this.setupIntro();
+  }
+  componentDidUpdate() {
+    const s = this.state;
+    if (s.done !== this._pd || s.won !== this._pw || s.finalSeen !== this._pf || s.notes !== this._pn) {
+      const first = this._pd === undefined;
+      this._pd = s.done; this._pw = s.won; this._pf = s.finalSeen; this._pn = s.notes;
+      if (!first) this.persist();
+    }
+  }
+  componentWillUnmount() { clearInterval(this.timer); this.stopFinal(); clearTimeout(this._introFail); clearTimeout(this._videoT); clearTimeout(this._revealT); this.stopGame(); clearInterval(this._fade); try { if (this.audio) this.audio.pause(); document.removeEventListener('visibilitychange', this._vis); } catch (e) {} }
+
+  vib(p) { try { if (navigator.vibrate) navigator.vibrate(p); } catch (e) {} }
+  ac() {
+    if (!this.state.sound) return null;
+    try {
+      this._ac = this._ac || new (window.AudioContext || window.webkitAudioContext)();
+      if (this._ac.state === 'suspended') this._ac.resume();
+      return this._ac;
+    } catch (e) { return null; }
+  }
+  tone(f1, f2, dur, vol, type) {
+    const a = this.ac(); if (!a) return;
+    try {
+      const o = a.createOscillator(), g = a.createGain(), t = a.currentTime;
+      o.type = type || 'sine'; o.frequency.setValueAtTime(f1, t);
+      if (f2) o.frequency.exponentialRampToValueAtTime(f2, t + dur);
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(a.destination); o.start(t); o.stop(t + dur + 0.03);
+    } catch (e) {}
+  }
+  pop() { this.tone(560, 170, 0.14, 0.22); }
+  bell() { this.tone(1318, 0, 0.9, 0.1); setTimeout(() => this.tone(1760, 0, 0.7, 0.07), 90); }
+  tick() { this.tone(900, 500, 0.06, 0.07, 'triangle'); }
+
+  confetti(o) {
+    o = o || {};
+    if (this.reduced) return;
+    const L = this.confRef.current; if (!L || !L.animate) return;
+    const lr = L.getBoundingClientRect();
+    const ox = o.x != null ? o.x - lr.left : lr.width / 2, oy = o.y != null ? o.y - lr.top : lr.height * 0.4;
+    const cols = ['#B8D8A0', '#F4A3B5', '#F7E28B', '#E2574C', '#FFFBF0', '#8A5A44'];
+    const n = o.n || 70;
+    for (let i = 0; i < n; i++) {
+      const el = document.createElement('div');
+      const sz = 6 + Math.random() * 7, round = Math.random() < 0.4;
+      Object.assign(el.style, {
+        position: 'absolute', left: (o.rain ? Math.random() * lr.width : ox) + 'px', top: (o.rain ? -20 : oy) + 'px',
+        width: sz + 'px', height: (round ? sz : sz * 0.5) + 'px', background: cols[i % cols.length],
+        borderRadius: round ? '50%' : '2px', border: '1px solid rgba(107,65,53,.35)', willChange: 'transform, opacity'
+      });
+      L.appendChild(el);
+      let dx, dy, mx, my;
+      if (o.rain) { dx = (Math.random() - 0.5) * 90; dy = lr.height + 40; mx = dx * 0.3; my = dy * 0.4; }
+      else { const a = Math.random() * Math.PI * 2, v = 70 + Math.random() * 160; mx = Math.cos(a) * v; my = Math.sin(a) * v - 50; dx = mx * 1.4; dy = my + 280; }
+      const an = el.animate([
+        { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+        { transform: `translate(${mx}px,${my}px) rotate(${Math.random() * 360}deg)`, opacity: 1, offset: 0.35 },
+        { transform: `translate(${dx}px,${dy}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+      ], { duration: o.rain ? 2600 + Math.random() * 2200 : 1100 + Math.random() * 700, delay: o.rain ? Math.random() * 1600 : 0, easing: 'cubic-bezier(.2,.6,.4,1)', fill: 'both' });
+      an.onfinish = () => el.remove();
+    }
+  }
+
+  allDone(done) { const d = done || this.state.done; return d.gelato && d.mood && d.machine && d.letter; }
+  markDone(k) { this.setState(s => s.done[k] ? null : { done: Object.assign({}, s.done, { [k]: true }) }); }
+
+  go(screen) {
+    this.stopGame(); this.vib(10); this.tick();
+    if (screen === 'box' && this.allDone() && !this.state.finalSeen) screen = 'final';
+    const patch = { screen };
+    if (screen === 'gelato') Object.assign(patch, { gPhase: 'intro', gCaught: 0, gTime: 40, gMsg: '' });
+    if (screen === 'machine') Object.assign(patch, { mPhase: this.state.won.length >= 7 ? 'complete' : 'idle', ticket: null });
+    if (screen === 'letter') patch.letterOpen = false;
+    if (screen === 'final') Object.assign(patch, { finalSeen: true, finUi: false });
+    if (screen === 'mood') Object.assign(patch, { note: null, noteOpen: false });
+    this.jarBusy = false; clearTimeout(this._jarT);
+    this.stopFinal();
+    this.setState(patch, () => { if (screen === 'final') this.playFinal(); });
+  }
+
+  openGift = () => {
+    if (this.opening) return;
+    this.opening = true; this.vib([15, 30, 15]); this.pop();
+    if (!this.reduced) {
+      const full = this.giftFullRef.current, base = this.giftBaseRef.current, lid = this.lidRef.current, gift = this.giftRef.current;
+      try {
+        if (gift) { gift.style.animation = 'none'; gift.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.08,.92)' }, { transform: 'scale(.96,1.06)' }, { transform: 'scale(1)' }], { duration: 380, easing: 'ease-out' }); }
+        setTimeout(() => {
+          if (full) full.style.opacity = '0';
+          if (base) base.style.opacity = '1';
+          if (lid) {
+            lid.style.opacity = '1';
+            lid.animate([
+              { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+              { transform: 'translate(-14px,-70%) rotate(-18deg)', opacity: 1, offset: .55 },
+              { transform: 'translate(-60px,-140%) rotate(-38deg)', opacity: 0 }
+            ], { duration: 800, easing: 'cubic-bezier(.25,1.2,.5,1)', fill: 'forwards' });
+          }
+          const r = gift ? gift.getBoundingClientRect() : null;
+          this.confetti(r ? { x: r.left + r.width / 2, y: r.top + r.height * 0.3, n: 90 } : { n: 90 });
+          this.bell(); this.vib([10, 20, 30]);
+        }, 330);
+      } catch (e) {}
+    }
+    setTimeout(() => { this.opening = false; this.go('box'); }, this.reduced ? 150 : 1500);
+  };
+
+  // ---- gelato game
+  stopGame() { if (this.raf) cancelAnimationFrame(this.raf); this.raf = null; if (this.g) this.g.ended = true; this.g = null; clearTimeout(this.msgT); }
+  startGame = () => {
+    this.stopGame(); this.vib(10);
+    this.setState({ gPhase: 'play', gCaught: 0, gTime: 40, gMsg: '' }, () => {
+      requestAnimationFrame(() => {
+        const c = this.canvasRef.current; if (!c) return;
+        const r = c.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+        c.width = Math.round(r.width * dpr); c.height = Math.round(r.height * dpr);
+        const ctx = c.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const W = r.width, H = r.height, R = Math.max(17, Math.min(24, W / 15, H / 22));
+        const t = performance.now();
+        this.g = { W, H, R, ctx, x: W / 2, items: [], stack: [], t0: t, last: t, spawn: 0.3, ended: false };
+        const step = (now) => {
+          const g = this.g; if (!g || g.ended) return;
+          const dt = Math.min(0.05, (now - g.last) / 1000); g.last = now;
+          const el = (now - g.t0) / 1000;
+          g.spawn -= dt;
+          if (g.spawn <= 0) {
+            g.spawn = 0.6 + Math.random() * 0.35;
+            const bad = el > 2 && Math.random() < 0.26;
+            const kind = bad ? (Math.random() < 0.5 ? 'broccolo' : 'cipolla') : Object.keys(this.D.COL)[Math.floor(Math.random() * 5)];
+            g.items.push({ kind, bad, x: R * 1.2 + Math.random() * (W - R * 2.4), y: 20 - R, v: 120 + Math.random() * 80 + el * 3, rot: (Math.random() - 0.5) * 0.6, done: false });
+          }
+          const top = H - 12 - R * 2.9;
+          for (const it of g.items) {
+            it.y += it.v * dt;
+            const nextY = top - R * 0.45 - g.stack.length * R * 1.25;
+            if (!it.done && Math.abs(it.y - nextY) < R * 0.9 && Math.abs(it.x - g.x) < R * 1.5) {
+              it.done = true; it.gone = true;
+              if (it.bad) {
+                g.stack.pop(); this.vib([40, 30, 40]); this.tone(220, 120, 0.25, 0.15, 'square');
+                clearTimeout(this.msgT);
+                this.setState({ gMsg: this.D.YUCK[Math.floor(Math.random() * this.D.YUCK.length)], gCaught: g.stack.length });
+                this.msgT = setTimeout(() => this.setState({ gMsg: '' }), 1300);
+              } else {
+                g.stack.push(it.kind); this.vib(12); this.pop();
+                this.setState({ gCaught: g.stack.length });
+              }
+            }
+          }
+          g.items = g.items.filter(it => !it.gone && it.y < H + 50);
+          this.draw();
+          const left = Math.max(0, Math.ceil(40 - el));
+          if (left !== this.state.gTime) this.setState({ gTime: left });
+          if (g.stack.length >= 6 || el >= 40) { this.endGame(); return; }
+          this.raf = requestAnimationFrame(step);
+        };
+        this.raf = requestAnimationFrame(step);
+      });
+    });
+  };
+  scoop(ctx, x, y, R, k) {
+    ctx.beginPath(); ctx.arc(x, y, R, 0, Math.PI * 2); ctx.fillStyle = this.D.COL[k]; ctx.fill();
+    ctx.lineWidth = 2.5; ctx.strokeStyle = '#6B4135'; ctx.stroke();
+    if (k === 'stracciatella') {
+      ctx.fillStyle = '#6B4135';
+      [[0.3, 0.2], [-0.4, 0.3], [0.1, -0.35], [-0.1, 0.55], [0.55, -0.15], [-0.5, -0.2]].forEach(([a, b]) => { ctx.beginPath(); ctx.arc(x + a * R, y + b * R, R * 0.09, 0, Math.PI * 2); ctx.fill(); });
+    }
+    ctx.beginPath(); ctx.ellipse(x - R * 0.35, y - R * 0.42, R * 0.28, R * 0.15, -0.6, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,255,255,.6)'; ctx.fill();
+  }
+  draw() {
+    const g = this.g, ctx = g.ctx, R = g.R;
+    ctx.clearRect(0, 0, g.W, g.H);
+    for (const it of g.items) {
+      if (it.bad) {
+        ctx.save(); ctx.translate(it.x, it.y); ctx.rotate(it.rot);
+        ctx.font = `${Math.round(R * 1.7)}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(it.kind === 'broccolo' ? '🥦' : '🧅', 0, 0); ctx.restore();
+      } else this.scoop(ctx, it.x, it.y, R, it.kind);
+    }
+    const top = g.H - 12 - R * 2.9, x = g.x, w = R * 1.15, h = R * 2.9;
+    ctx.beginPath(); ctx.moveTo(x - w, top); ctx.lineTo(x + w, top); ctx.lineTo(x, top + h); ctx.closePath();
+    ctx.fillStyle = '#E9B872'; ctx.fill();
+    ctx.save(); ctx.clip(); ctx.strokeStyle = '#C98E45'; ctx.lineWidth = 2;
+    for (let i = -4; i <= 4; i++) { ctx.beginPath(); ctx.moveTo(x + i * R * 0.6, top); ctx.lineTo(x + i * R * 0.6 + h * 0.7, top + h); ctx.moveTo(x + i * R * 0.6, top); ctx.lineTo(x + i * R * 0.6 - h * 0.7, top + h); ctx.stroke(); }
+    ctx.restore();
+    ctx.beginPath(); ctx.moveTo(x - w, top); ctx.lineTo(x + w, top); ctx.lineTo(x, top + h); ctx.closePath();
+    ctx.lineJoin = 'round'; ctx.lineWidth = 2.5; ctx.strokeStyle = '#6B4135'; ctx.stroke();
+    g.stack.forEach((k, i) => this.scoop(ctx, x, top - R * 0.45 - i * R * 1.25, R, k));
+  }
+  endGame() {
+    const g = this.g; if (!g) return;
+    let st = g.stack.slice(); this.stopGame();
+    if (!st.length) st = ['cioccolato'];
+    const cnt = {}; let fav = st[0], best = 0;
+    st.forEach(k => { cnt[k] = (cnt[k] || 0) + 1; if (cnt[k] >= best) { best = cnt[k]; fav = k; } });
+    this.setState({ gPhase: 'result', gResult: { stack: st, fav }, gMsg: '' });
+    this.markDone('gelato'); this.bell(); this.vib([20, 40, 20]);
+    setTimeout(() => this.confetti({ n: 60 }), 250);
+  }
+  gPointer = (e) => {
+    const g = this.g; if (!g) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    g.x = Math.max(g.R * 1.2, Math.min(g.W - g.R * 1.2, e.clientX - r.left));
+  };
+
+  // ---- barattolo
+  // NOTE_AT: second of barattolo.mp4 where the paper leaves the jar mouth
+  drawNote = () => {
+    if (this.jarBusy || this.state.noteOpen) return;
+    this.jarBusy = true;
+    const D = this.D, s = this.state;
+    this.vib([10, 20, 10]);
+    const all = D.NOTES.map((_, i) => i);
+    let left = all.filter(i => s.notes.indexOf(i) < 0 && i !== s.note);
+    if (!left.length) left = all.filter(i => i !== s.note);
+    const pick = left[Math.floor(Math.random() * left.length)];
+    const notes = s.notes.indexOf(pick) < 0 ? s.notes.concat(pick) : s.notes;
+    const reveal = () => {
+      clearTimeout(this._jarT);
+      if (!this.jarBusy) return;
+      this.jarBusy = false;
+      this.pop();
+      this.setState({ note: pick, notes, noteOpen: true }, () => this.flyNote());
+      if (notes.length >= D.NOTES.length && s.notes.length < D.NOTES.length) setTimeout(() => this.bell(), 900);
+    };
+    const v = this.jarRef.current;
+    if (!v || this.reduced) { reveal(); this.markDone('mood'); return; }
+    v.muted = true; v.playsInline = true;
+    try { v.currentTime = 0; } catch (e) {}
+    v.ontimeupdate = () => { if (v.currentTime >= this.D.NOTE_AT) { v.ontimeupdate = null; reveal(); } };
+    v.onerror = reveal; v.onended = reveal;
+    this._jarT = setTimeout(reveal, (this.D.NOTE_AT + 1.2) * 1000);
+    try { const p = v.play(); if (p && p.catch) p.catch(reveal); } catch (e) { reveal(); }
+    this.markDone('mood');
+  };
+  // the folded paper flies from the jar mouth to the centre, then .jar-paper unfolds it
+  flyNote() {
+    const el = this.noteRef.current, v = this.jarRef.current;
+    if (!el || !el.animate || this.reduced) return;
+    const to = el.getBoundingClientRect();
+    let dx = 0, dy = 120;
+    if (v) { const r = v.getBoundingClientRect(); dx = r.left + r.width / 2 - (to.left + to.width / 2); dy = r.top + r.height * 0.18 - (to.top + to.height / 2); }
+    el.animate([
+      { transform: `translate(${dx}px, ${dy}px) scale(.18) rotate(-20deg)`, opacity: 0 },
+      { transform: `translate(${dx * 0.4}px, ${dy * 0.4 - 30}px) scale(.45) rotate(8deg)`, opacity: 1, offset: 0.5 },
+      { transform: 'rotate(-1.5deg)', opacity: 1 }
+    ], { duration: 520, easing: 'cubic-bezier(.25,.8,.35,1)' });
+  }
+  resetJar() {
+    const v = this.jarRef.current;
+    if (v) { try { v.pause(); v.currentTime = 0; } catch (e) {} v.ontimeupdate = v.onerror = v.onended = null; }
+  }
+  closeNote = (after) => {
+    const veil = this.veilRef.current;
+    const done = () => { this.resetJar(); this.setState({ noteOpen: false }, typeof after === 'function' ? after : undefined); };
+    if (veil && veil.animate && !this.reduced) veil.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, easing: 'ease-in', fill: 'forwards' }).onfinish = done;
+    else done();
+  };
+  anotherNote = () => { this.vib(10); this.closeNote(() => setTimeout(this.drawNote, 120)); };
+  stopTap = (e) => { if (e && e.stopPropagation) e.stopPropagation(); };
+
+  // ---- final
+  playFinal() {
+    const v = this.finRef.current;
+    const show = () => { if (this.state.screen === 'final' && !this.state.finUi) { this.setState({ finUi: true }); this.bell(); } };
+    clearTimeout(this._finT);
+    if (!v || this.reduced) { show(); return; }
+    v.muted = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    try { v.currentTime = 0; } catch (e) {}
+    v.onended = show;
+    v.onerror = show;
+    let cue = 0;
+    v.ontimeupdate = () => {
+      const cues = this.D.LEO_CUES;
+      while (cue < cues.length && v.currentTime >= cues[cue][0]) this.leoSound(cues[cue++][1]);
+      if (v.duration && v.currentTime >= v.duration - 1.2) show();
+    };
+    this._finT = setTimeout(() => { if (v.paused) show(); }, 3000);
+    try { const p = v.play(); if (p && p.catch) p.catch(show); } catch (e) { show(); }
+  }
+  leoSound(kind) {
+    if (!this.state.sound) return;
+    if (kind === 'meow') { try { const m = this._meow || (this._meow = new Audio('assets/miau.m4a')); m.currentTime = 0; m.volume = 0.9; m.play().catch(() => {}); } catch (e) {} this.vib(15); }
+    else if (kind === 'hop') this.tone(260, 820, 0.16, 0.12);
+    else if (kind === 'patter') [0, 90, 180, 270].forEach(t => setTimeout(() => this.tone(700, 400, 0.05, 0.05, 'triangle'), t));
+  }
+  stopFinal() {
+    clearTimeout(this._finT);
+    const v = this.finRef.current;
+    if (v) { try { v.pause(); } catch (e) {} v.ontimeupdate = v.onended = v.onerror = null; }
+  }
+
+  // ---- machine
+  crankDown = (e) => {
+    if (this.state.mPhase !== 'idle' || this.spinning) return;
+    const svg = this.machineSvgRef.current; if (!svg) return;
+    const r = svg.getBoundingClientRect();
+    const cx = r.left + r.width * 0.5, cy = r.top + r.height * (208 / 262);
+    this.cr = { cx, cy, a0: Math.atan2(e.clientY - cy, e.clientX - cx), acc: 0, moved: 0 };
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
+  };
+  crankMove = (e) => {
+    const c = this.cr; if (!c) return;
+    const a = Math.atan2(e.clientY - c.cy, e.clientX - c.cx);
+    let d = a - c.a0; if (d > Math.PI) d -= Math.PI * 2; if (d < -Math.PI) d += Math.PI * 2;
+    c.a0 = a; c.acc += d; c.moved += Math.abs(d);
+    const k = this.crankRef.current; if (k) k.style.transform = `rotate(${c.acc * 180 / Math.PI}deg)`;
+    if (Math.abs(c.acc) > Math.PI * 1.6) { this.cr = null; this.spin(c.acc * 180 / Math.PI); }
+  };
+  crankUp = () => {
+    const c = this.cr; this.cr = null; if (!c) return;
+    if (c.moved < 0.35) this.spin(0);
+    else { const k = this.crankRef.current; if (k) k.style.transform = ''; }
+  };
+  spinTap = () => this.spin(0);
+  spin(fromDeg) {
+    if (this.spinning || this.state.mPhase !== 'idle') return;
+    const remaining = this.D.VOUCHERS.filter(v => this.state.won.indexOf(v.id) < 0);
+    if (!remaining.length) { this.setState({ mPhase: 'complete' }); return; }
+    this.spinning = true; this.vib([10, 20, 10, 20, 10]); this.tick();
+    const k = this.crankRef.current, w = this.machineWrapRef.current;
+    const dir = fromDeg < 0 ? -1 : 1, to = Math.round((fromDeg + dir * 360) / 360) * 360 || dir * 360;
+    if (!this.reduced) {
+      try {
+        k && k.animate([{ transform: `rotate(${fromDeg}deg)` }, { transform: `rotate(${to}deg)` }], { duration: 600, easing: 'cubic-bezier(.4,0,.2,1)' });
+        w && w.animate([{ transform: 'rotate(0)' }, { transform: 'rotate(-2.5deg)' }, { transform: 'rotate(2.5deg)' }, { transform: 'rotate(-2deg)' }, { transform: 'rotate(1.5deg)' }, { transform: 'rotate(0)' }], { duration: 520, delay: 150 });
+      } catch (e) {}
+    }
+    if (k) k.style.transform = '';
+    setTimeout(() => this.tick(), 200); setTimeout(() => this.tick(), 400);
+    setTimeout(() => {
+      const v = remaining[Math.floor(Math.random() * remaining.length)];
+      const ci = this.D.VOUCHERS.indexOf(v);
+      this.pending = v; this.spinning = false;
+      this.setState({ mPhase: 'capsule', capColor: this.D.CAPCOL[ci % 7] === '#FBF3E4' ? '#F7E28B' : this.D.CAPCOL[ci % 7] });
+      this.pop(); this.vib(25);
+    }, this.reduced ? 100 : 700);
+  }
+  openCapsule = () => {
+    const v = this.pending; if (!v) return;
+    this.pending = null; this.vib([15, 25, 30]); this.bell();
+    const won = this.state.won.indexOf(v.id) < 0 ? this.state.won.concat(v.id) : this.state.won;
+    this.setState({ mPhase: 'ticket', ticket: Object.assign({ n: won.length }, v), won });
+    this.markDone('machine');
+    setTimeout(() => this.confetti({ n: won.length >= 7 ? 110 : 50 }), 150);
+  };
+  closeTicket = () => { this.vib(10); this.setState(s => ({ mPhase: s.won.length >= 7 ? 'complete' : 'idle', ticket: null })); };
+
+  // ---- letter
+  openLetter = () => {
+    if (this.letterBusy) return; this.letterBusy = true;
+    this.vib([10, 30, 10]); this.pop();
+    const f = this.flapRef.current;
+    if (f && f.animate && !this.reduced) { try { f.animate([{ transform: 'scaleY(1)' }, { transform: 'scaleY(-1)' }], { duration: 480, fill: 'forwards', easing: 'ease-in-out' }); } catch (e) {} }
+    setTimeout(() => { this.letterBusy = false; this.setState({ letterOpen: true }); this.markDone('letter'); this.bell(); }, this.reduced ? 50 : 560);
+  };
+
+  music(on) {
+    try {
+      if (!this.audio) {
+        this.audio = new Audio('assets/musica.m4a'); this.audio.loop = true; this.audio.preload = 'auto'; this.audio.volume = 0;
+        this._vis = () => { if (!this.audio) return; if (document.hidden) this.audio.pause(); else if (this.state.sound) this.audio.play().catch(() => {}); };
+        document.addEventListener('visibilitychange', this._vis);
+      }
+      const a = this.audio; clearInterval(this._fade);
+      if (on) {
+        a.play().catch(() => {});
+        this._fade = setInterval(() => { a.volume = Math.min(0.16, a.volume + 0.02); if (a.volume >= 0.16) clearInterval(this._fade); }, 80);
+      } else {
+        this._fade = setInterval(() => { a.volume = Math.max(0, a.volume - 0.06); if (a.volume <= 0) { clearInterval(this._fade); a.pause(); } }, 50);
+      }
+    } catch (e) {}
+  }
+  toggleSound = () => {
+    this.vib(10);
+    const on = !this.state.sound;
+    this.music(on);
+    this.setState({ sound: on }, () => { if (on) this.bell(); });
+  };
+
+  renderVals() {
+    const s = this.state, D = this.D;
+    const sim = this.props.simulaData === '10 novembre';
+    const now = sim ? D.TARGET + 3600e3 : s.now;
+    const diff = D.TARGET - now, isToday = diff <= 0;
+    const sec = Math.max(0, Math.floor(diff / 1000));
+    const cd = { d: Math.floor(sec / 86400), h: Math.floor(sec % 86400 / 3600), m: Math.floor(sec % 3600 / 60), s: String(sec % 60).padStart(2, '0') };
+    const p = Math.max(0.07, Math.min(1, (now - D.START) / (D.TARGET - D.START)));
+    const doneCount = ['gelato', 'mood', 'machine', 'letter'].filter(k => s.done[k]).length;
+    const finalUnlocked = doneCount === 4 || !!this.props.sbloccaFinale;
+    const sc = s.screen;
+    const res = s.gResult;
+        const remainingCaps = Math.max(0, 7 - s.won.length);
+    return {
+      introPhase: s.intro, videoOn: s.videoOn, videoOpacity: s.videoFade ? 0 : 1, introRef: this.introRef, skipIntro: this.skipIntro,
+      jarRef: this.jarRef, noteRef: this.noteRef, veilRef: this.veilRef, finRef: this.finRef, drawNote: this.drawNote,
+      noteOpen: s.noteOpen, closeNote: () => this.closeNote(), anotherNote: this.anotherNote, stopTap: this.stopTap,
+      noteText: s.note !== null ? D.NOTES[s.note] : '', noteNum: s.notes.length, noteTotal: D.NOTES.length,
+      jarHint: s.notes.length >= D.NOTES.length ? 'Li hai letti tutti! Il resto te lo dico il 10 💛' : 'Tocca il barattolo e pesca un biglietto',
+      finState: s.finUi ? 'on' : 'off',
+      isCover: sc === 'cover', bgA: this.props.sfondo === 'A', bgB: this.props.sfondo !== 'A', bgVeil: sc !== 'cover' && sc !== 'final', isBox: sc === 'box', isGelato: sc === 'gelato', isMood: sc === 'mood',
+      isMachine: sc === 'machine', isWallet: sc === 'wallet', isLetter: sc === 'letter', isFinal: sc === 'final',
+      showBack: sc !== 'cover', backLabel: sc === 'box' ? '← Inizio' : '← Scatola',
+      backAction: () => this.go(sc === 'box' ? 'cover' : 'box'),
+      soundIcon: s.sound ? '🔊' : '🔇', toggleSound: this.toggleSound, musicHint: sc === 'cover' && !s.sound,
+      cd, isToday, notToday: !isToday, fillY: 170 - p * 170,
+      openGift: this.openGift,
+      done: s.done, doneCount, finalUnlocked, finalLocked: !finalUnlocked,
+      goGelato: () => this.go('gelato'), goMood: () => this.go('mood'), goMachine: () => this.go('machine'),
+      goLetter: () => this.go('letter'), goWallet: () => this.go('wallet'), goFinal: () => this.go('final'), goBox: () => this.go('box'),
+      canvasRef: this.canvasRef, giftRef: this.giftRef, giftFullRef: this.giftFullRef, giftBaseRef: this.giftBaseRef, lidRef: this.lidRef, bowRef: this.bowRef, confRef: this.confRef,
+      crankRef: this.crankRef, machineSvgRef: this.machineSvgRef, machineWrapRef: this.machineWrapRef, flapRef: this.flapRef,
+      gNotResult: s.gPhase !== 'result', gIsResult: s.gPhase === 'result', gIsIntro: s.gPhase === 'intro',
+      gCaught: s.gCaught, gTime: s.gTime, gMsg: s.gMsg, gHasMsg: !!s.gMsg,
+      startGame: this.startGame, gPointer: this.gPointer,
+      resultScoops: res ? res.stack.map((k, i) => ({ cy: 166 - i * 25, fill: k === 'stracciatella' ? 'url(#strac)' : D.COL[k] })) : [],
+      favName: res ? D.NAMES[res.fav] : '', favText: res ? D.FAV[res.fav] : '',
+      wonCount: s.won.length, allWon: s.won.length >= 7,
+      capsules: D.CAPS.slice(0, remainingCaps).map((c, i) => ({ cx: c[0], cy: c[1], fill: D.CAPCOL[i] })),
+      crankDown: this.crankDown, crankMove: this.crankMove, crankUp: this.crankUp, spinTap: this.spinTap,
+      mIdle: s.mPhase === 'idle', mCapsule: s.mPhase === 'capsule', mComplete: s.mPhase === 'complete', mTicket: s.mPhase === 'ticket' && !!s.ticket,
+      capColor: s.capColor, openCapsule: this.openCapsule, closeTicket: this.closeTicket,
+      ticket: s.ticket || {}, ticketNext: s.won.length >= 7 ? 'Evviva! 👑' : 'Ancora! ↻',
+      wallet: D.VOUCHERS.map(v => { const w = s.won.indexOf(v.id) >= 0; return Object.assign({ won: w, locked: !w }, v); }),
+      letterOpen: s.letterOpen, letterClosed: !s.letterOpen, openLetter: this.openLetter,
+      firma: this.props.firma ?? '[MI NOMBRE]',
+      seeYouText: isToday ? 'È oggi! Ci vediamo 💛' : (cd.d === 0 ? 'Ci vediamo alle 20:00 💛' : (cd.d === 1 ? 'Ci vediamo tra 1 giorno' : `Ci vediamo tra ${cd.d} giorni`))
+    };
+  }
+}
+</script>
+</body>
+</html>
